@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .background-image {
+            background-image: url('ff.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+    <h1>Gestionnaire de Bibliothèque</h1>
+   
+    
+    <h2>Ajouter un Livre</h2>
+    <form onsubmit="addBook(); return false;">
+        <input type="text" id="title" placeholder="Titre">
+        <input type="text" id="author" placeholder="Auteur">
+        <input type="text" id="genre" placeholder="Genre">
+        <input type="text" id="isbn" placeholder="ISBN">
+        <button type="submit">Ajouter</button>
+        <div class="form-group">
+            <br>
+            <input type="text" id="search" placeholder="Rechercher un livre" oninput="searchBooks()">
+        </div>
+    </form>
+  
+  <h2> Liste des Livres</h2>
+    <ul id="book-list"></ul>
+ <div id="book-list"></div>
+    <script src="script.js"></script>
+</body>
+</html>

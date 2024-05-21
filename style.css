@@ -1,0 +1,95 @@
+
+:root {
+    --primary-color:#ffff;
+    --secondary-color: #39ee6f;
+    --background-color: rgba(0, 0, 0, 0.5);
+    --font-family: 'Arial', sans-serif;
+    --spacing: 10px;
+    --container-width: 100%;
+    --container-max-width: 600px;
+    --input-padding: 8px;
+    --button-padding: 10px 20px;
+    --button-hover-color:#fd2d2d;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: var(--font-family);
+}
+
+.background-image {
+    background-image: url('ff.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(2px); 
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: var(--container-max-width);
+    margin: auto;
+    padding: var(--spacing);
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(202, 9, 9, 0.87);
+    color: var(--secondary-color);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: var(--spacing);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: var(--input-padding);
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: var(--spacing);
+}
+
+button {
+    width: 100%;
+    padding: var(--button-padding);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: var(--spacing);
+    padding: var(--spacing);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 4px;
+}
